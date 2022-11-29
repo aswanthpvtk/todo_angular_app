@@ -7,19 +7,20 @@ import { AddtodoComponent } from './addtodo/addtodo.component';
 import { ViewAlltodoComponent } from './view-alltodo/view-alltodo.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
-
-const myroute:Routes =[
-
+const myRoutes:Routes=[
   {
-    path :"",
-    component :AddtodoComponent
+    path:"v",
+    component:ViewAlltodoComponent
   },
   {
-    path :"v",
-    component: ViewAlltodoComponent
+    path:"",
+    component:AddtodoComponent
   },
 ]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,10 @@ const myroute:Routes =[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myroute)
+    RouterModule.forRoot(myRoutes),
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

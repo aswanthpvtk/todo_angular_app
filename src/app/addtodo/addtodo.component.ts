@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AddtodoComponent {
 
+  uid=""
+  id=""
+  title=""
+  comp=""
+
+
+  readValues=()=>
+  {
+    let data:any={"uid":this.uid,"id":this.id,"title":this.title,"comp":this.comp}
+    console.log(data)
+
+    
+  }
+
 }
